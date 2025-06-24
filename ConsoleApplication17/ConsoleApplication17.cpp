@@ -1,6 +1,5 @@
 ﻿#include "header.h"
 // repository link: https://github.com/Wow10d/ConsoleApplication17
-// очищати з 0
 int main()
 {
 	setlocale(LC_ALL, "ukr");
