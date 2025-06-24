@@ -70,6 +70,11 @@ void move_road(COORD* dx, COORD road[2][ROAD_LEN], COORD trouble[ROAD_LEN], COOR
 		}
 	}
 
+	setCursorPosition({ trouble[0].X, 1 });
+	if (trouble[0].X > 0) cout << " ";
+	setCursorPosition({ gifts[0].X, 1 });
+	if (gifts[0].X > 0) cout << " ";
+
 	short newX{};
 	if (hardMode && rand() % 4 == 0) {
 		newX = road[0][0].X + rand() % (road[1][0].X - road[0][0].X - 1);
@@ -78,6 +83,7 @@ void move_road(COORD* dx, COORD road[2][ROAD_LEN], COORD trouble[ROAD_LEN], COOR
 	trouble[0] = {newX, 1};
 	setCursorPosition(trouble[0]);
 	if (trouble[0].X > 0) cout << "&";
+
 
 	short giftX{};
 	if (rand() % 10 == 0) {

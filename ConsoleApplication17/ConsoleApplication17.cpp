@@ -1,7 +1,9 @@
 ﻿#include "header.h"
+// repository link: https://github.com/Wow10d/ConsoleApplication17
+// очищати з 0
 int main()
 {
-	setlocale(0, "");
+	setlocale(LC_ALL, "ukr");
 
 	system("chcp 65001 >nul");
 
@@ -26,11 +28,12 @@ int main()
 	loadLeaderboard(easyLB, "easy.txt");
 	loadLeaderboard(hardLB, "hard.txt");
 	printCarGame();
-	Sleep(5000);
+	system("pause");
 	system("cls");
 	cout << "Register: "; cin >> name;
 	printLeaderboard(easyLB, "EASY LEADERBOARD", 5, 5);
 	printLeaderboard(hardLB, "HARD LEADERBOARD", 40, 5);
+	cout << endl << endl << endl << endl;
 	cout << "Choose mode: \n Easy - 1 \n Hard - 2" << endl; cin >> mode;
 
 	if (mode == 2) hardMode = true;
