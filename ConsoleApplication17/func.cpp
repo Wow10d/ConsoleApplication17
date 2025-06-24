@@ -70,6 +70,7 @@ void move_road(COORD* dx, COORD road[2][ROAD_LEN], COORD trouble[ROAD_LEN], COOR
 		}
 	}
 
+
 	setCursorPosition({ trouble[0].X, 1 });
 	if (trouble[0].X > 0) cout << " ";
 	setCursorPosition({ gifts[0].X, 1 });
